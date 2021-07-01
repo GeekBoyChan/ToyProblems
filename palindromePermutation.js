@@ -16,4 +16,10 @@ let palindromePermutation = (str) => {
     }
     charCount++;
   }
+
+  if(charCount % 2 === 0) {
+    return Object.keys(myHash).length === 0;
+  } else {
+    return Object.keys(myHash).length === 1;
+  }
 };
