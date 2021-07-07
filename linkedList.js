@@ -90,6 +90,12 @@ class LinkedList {
     this.size--;
   }
 
+  //clear list
+  clearList() {
+    this.head = null;
+    this.size = 0;
+  }
+
   //Print List Data
   listData() {
     if (this.head === null || this.size === 0) {
