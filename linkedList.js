@@ -71,6 +71,25 @@ class LinkedList {
     console.log(current.data);
   }
 
+  //remove at index;
+  removeAtIndex(index) {
+    if (index > 0 && index > this.size - 1) {
+      return;
+    }
+
+    let current = this.head;
+    let count = 0;
+    let previous = undefined;
+
+    while (count < index) {
+      previous = current;
+      current = current.next;
+      count++;
+    }
+    previous.next = current.next;
+    this.size--;
+  }
+
   //Print List Data
   listData() {
     if (this.head === null || this.size === 0) {
