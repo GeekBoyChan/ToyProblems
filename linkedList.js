@@ -30,6 +30,31 @@ class LinkedList {
     this.size++;
   }
 
+  //insert at index
+  insertAtIndex(data, index) {
+    if (index > this.size && index > 0) {
+      return;
+    }
+    if (index === 0) {
+      this.insertFirst(data);
+      return;
+    }
+
+    let count = 0;
+    let newNode = new Node(data);
+    let current = this.head;
+    let previous = undefined;
+
+    while (count < index) {
+      previous = current;
+      current = current.next;
+      count++;
+    }
+    newNode.next = current;
+    previous.next = newNode;
+    this.size++;
+  }
+
   //Print List Data
   listData() {
     if (this.head === null || this.size === 0) {
