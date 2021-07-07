@@ -55,6 +55,22 @@ class LinkedList {
     this.size++;
   }
 
+  //get at index
+  getIndex(index) {
+    if (index > 0 && index > this.size - 1) {
+      return;
+    }
+
+    let current = this.head;
+    let count = 0;
+    while (count < index) {
+      current = current.next;
+      count++;
+    }
+
+    console.log(current.data);
+  }
+
   //Print List Data
   listData() {
     if (this.head === null || this.size === 0) {
