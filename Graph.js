@@ -52,10 +52,3 @@ g.addEdge('E', 'F');
 g.addEdge('E', 'C');
 g.addEdge('C', 'F');
 g.print();
-/* PRINTED */
-// A [ 'B', 'D', 'E' ]
-// B [ 'C' ]
-// C [ 'F' ]
-// D [ 'E' ]
-// E [ 'F', 'C' ]
-// F []
