@@ -1,4 +1,4 @@
-let highestProductOf3 => (arrayOfInts) {
+let highestProductOf3 = (arrayOfInts) => {
   // Calculate the highest product of three numbers
   if (arrayOfInts.length <= 2) {
     throw new Error('Array must contain at least 3 ints');
@@ -37,7 +37,7 @@ let highestProductOf3 => (arrayOfInts) {
   }
 
   return highestProdOf3;
-}
+};
 
 // Tests
 
@@ -67,22 +67,22 @@ expected = -6;
 assertEqual(actual, expected, desc);
 
 desc = 'error with empty array';
-const emptyArray = () => (highestProductOf3([]));
+const emptyArray = () => highestProductOf3([]);
 assertThrowsError(emptyArray, desc);
 
 desc = 'error with one number';
-const oneNumber = () => (highestProductOf3([1]));
+const oneNumber = () => highestProductOf3([1]);
 assertThrowsError(oneNumber, desc);
 
 desc = 'error with two numbers';
-const twoNumber = () => (highestProductOf3([1, 1]));
+const twoNumber = () => highestProductOf3([1, 1]);
 assertThrowsError(twoNumber, desc);
 
 function assertEqual(a, b, desc) {
   if (a === b) {
     console.log(`${desc} ... PASS`);
   } else {
-    console.log(`${desc} ... FAIL: ${a} != ${b}`)
+    console.log(`${desc} ... FAIL: ${a} != ${b}`);
   }
 }
 
